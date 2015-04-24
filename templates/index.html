@@ -17,6 +17,13 @@
 				<h1>tumor classification</h1>
 				<p><p>
 			</div>
+
+			<form action="">
+				{% for collection in collections %}
+				<input type="radio" name="collection" value={{collection}}>{{collection}}</input>
+				{% endfor %}
+			</form>
+
 			{% if image_filepath %}
 			<div class="row" style="height:50%"><img class="image-responsive" src={{image_filepath}} style="height:100%"></img></div>
 			{% else %}
